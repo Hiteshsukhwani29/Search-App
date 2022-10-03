@@ -1,0 +1,34 @@
+.searchbar-wrapper {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+.searchbar {
+  width: max-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  background-color: white;
+  border: 1px solid #eee;
+  border-radius: 10px;
+}
+.searchbar > input {
+  height: 24px;
+  width: 400px;
+  border: none;
+}
+.searchbar > input::placeholder {
+  color: #666;
+}
+.searchbar > input:focus-visible {
+  border: none;
+  outline: none;
+}
+.searchbar-icon {
+  width: 24px;
+  height: 24px;
+  margin: 0px 0px 0px 10px;
+  color: #666;
+}
