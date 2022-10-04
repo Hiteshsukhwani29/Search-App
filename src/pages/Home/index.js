@@ -1,24 +1,13 @@
 import React, { useState } from "react";
 import "./index.css";
-import Searchbar from "../../components/Searchbar";
-import Logo from "../../assets/logo.png";
 import ProductCard from "../../components/ProductCard";
 
-function Index() {
-  const [SearchIsFocused, setSearchIsFocused] = useState(false);
+function Index({SearchIsFocused, setSearchIsFocused,setIsHomePage}) {
   console.log(SearchIsFocused);
+  setIsHomePage(true);
   return (
     <div className="home">
-      <div
-        className="home-img-container"
-        onClick={(e) => setSearchIsFocused(false)}
-      >
-        <img src={Logo} />
-      </div>
-      <Searchbar
-        SearchIsFocused={SearchIsFocused}
-        setSearchIsFocused={setSearchIsFocused}
-      />
+      
       <div className="home-bottom" onClick={(e) => setSearchIsFocused(false)}>
         {SearchIsFocused ? (
           <div className="home-latestbox" onClick={(e) => e.stopPropagation()}>
