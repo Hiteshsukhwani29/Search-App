@@ -2,7 +2,8 @@
   width: 100vw;
   display: flex;
   justify-content: center;
-  padding: 20px;
+  padding: 20px 0px;
+  z-index: 10;
 }
 .searchbar {
   width: max-content;
@@ -16,7 +17,7 @@
 }
 .searchbar > input {
   height: 24px;
-  width: 400px;
+  width: 500px;
   border: none;
 }
 .searchbar > input::placeholder {
