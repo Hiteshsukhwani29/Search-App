@@ -9,14 +9,30 @@ function Index({ setIsHomePage }) {
   const [Electronics, setElectronics] = useState(false);
   const [WomenClothing, setWomenClothing] = useState(false);
   const [PriceRange, setPriceRange] = useState(1000);
-  
+
   setIsHomePage(false);
   return (
     <div className="searchpage">
       <div className="searchpage-heading">Search Results</div>
       <div className="searchpage-body">
-        <FilterBox MensClothing={MensClothing} setMensClothing={setMensClothing} Jewelery={Jewelery} setJewelery={setJewelery} Electronics={Electronics} setElectronics={setElectronics} WomenClothing={WomenClothing} setWomenClothing={setWomenClothing} PriceRange={PriceRange} setPriceRange={setPriceRange} />
-        <Products MensClothing={MensClothing} setMensClothing={setMensClothing} Jewelery={Jewelery} setJewelery={setJewelery} Electronics={Electronics} setElectronics={setElectronics} WomenClothing={WomenClothing} setWomenClothing={setWomenClothing} PriceRange={PriceRange} setPriceRange={setPriceRange} />
+        <FilterBox
+          MensClothing={MensClothing}
+          setMensClothing={setMensClothing}
+          Jewelery={Jewelery}
+          setJewelery={setJewelery}
+          Electronics={Electronics}
+          setElectronics={setElectronics}
+          WomenClothing={WomenClothing}
+          setWomenClothing={setWomenClothing}
+          PriceRange={PriceRange}
+          setPriceRange={setPriceRange}
+        />
+        <Products
+          MensClothing={MensClothing}
+          Jewelery={Jewelery}
+          Electronics={Electronics}
+          PriceRange={PriceRange}
+        />
       </div>
     </div>
   );

@@ -7,7 +7,6 @@ import {
   Checkbox,
   FormControl,
   Radio,
-  FormLabel,
   RadioGroup,
 } from "@mui/material";
 
@@ -18,24 +17,21 @@ function Index({
   setJewelery,
   Electronics,
   setElectronics,
-  WomenClothing,
-  setWomenClothing,
   PriceRange,
   setPriceRange,
 }) {
-  const [checked, setChecked] = useState(true);
   const [OpenCategoryDropdown, setOpenCategoryDropdown] = useState(true);
   const [OpenPriceDropdown, setOpenPriceDropdown] = useState(false);
   const [OpenRatingDropdown, setOpenRatingDropdown] = useState(false);
 
   return (
     <div className="filter-wrapper">
-      <div className="category">
+      <div className="dropdown">
         <div
-          className="category-title"
+          className="dropdown-title"
           onClick={() => setOpenCategoryDropdown(!OpenCategoryDropdown)}
         >
-          <div>Category</div>
+          <div>dropdown</div>
           {OpenCategoryDropdown ? (
             <ChevronUpIcon style={{ width: "20px", height: "20px" }} />
           ) : (
@@ -43,7 +39,7 @@ function Index({
           )}
         </div>
         {OpenCategoryDropdown ? (
-          <div className="category-checklist">
+          <div className="dropdown-checklist">
             <FormGroup>
               <FormControlLabel
                 control={
@@ -88,9 +84,9 @@ function Index({
         )}
       </div>
       <div className="hr"></div>
-      <div className="category">
+      <div className="dropdown">
         <div
-          className="category-title"
+          className="dropdown-title"
           onClick={() => setOpenPriceDropdown(!OpenPriceDropdown)}
         >
           <div>Price Range</div>
@@ -101,7 +97,7 @@ function Index({
           )}
         </div>
         {OpenPriceDropdown ? (
-          <div className="category-checklist">
+          <div className="dropdown-checklist">
             <FormControl>
               <RadioGroup
                 aria-labelledby="demo-radio-buttons-group-label"
@@ -159,53 +155,15 @@ function Index({
                 />
               </RadioGroup>
             </FormControl>
-            {/* <FormGroup>
-              <FormControlLabel
-                control={
-                  <Checkbox
-                    defaultChecked
-                    style={{
-                      margin: "-5px 0px",
-                      transform: "scale(0.8)",
-                    }}
-                  />
-                }
-                label="Label"
-              />
-              <FormControlLabel
-                control={
-                  <Checkbox
-                    defaultChecked
-                    style={{
-                      margin: "-5px 0px",
-                      transform: "scale(0.8)",
-                    }}
-                  />
-                }
-                label="Label"
-              />
-              <FormControlLabel
-                control={
-                  <Checkbox
-                    defaultChecked
-                    style={{
-                      margin: "-5px 0px",
-                      transform: "scale(0.8)",
-                    }}
-                  />
-                }
-                label="Label"
-              />
-            </FormGroup> */}
           </div>
         ) : (
           <></>
         )}
       </div>
       <div className="hr"></div>
-      <div className="category">
+      <div className="dropd">
         <div
-          className="category-title"
+          className="dropdown-title"
           onClick={() => setOpenRatingDropdown(!OpenRatingDropdown)}
         >
           <div>Ratings</div>
@@ -216,7 +174,7 @@ function Index({
           )}{" "}
         </div>
         {OpenRatingDropdown ? (
-          <div className="category-checklist">
+          <div className="dropdown-checklist">
             <FormGroup>
               <FormControlLabel
                 control={

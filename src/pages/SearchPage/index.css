@@ -1,27 +1,27 @@
 .searchpage {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 20px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px 40px;
 }
 .searchpage-body {
-    display: flex;
+  display: flex;
 }
 .searchpage-heading {
-    font-size: 26px;
-    margin-bottom: 20px;
+  font-size: 26px;
+  margin-bottom: 20px;
 }
 @media only screen and (max-width: 600px) {
-    .searchpage {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 0px 0px;
-    }
-    .searchpage-body {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+  .searchpage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 0px;
   }
+  .searchpage-body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

@@ -1,7 +1,7 @@
 import "./App.css";
 import Home from "./pages/Home";
 import SearchPage from "./pages/SearchPage";
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Searchbar from "./components/Searchbar";
 import Logo from "./assets/logo.png";
 import { useState } from "react";
@@ -21,14 +21,13 @@ function App() {
       backgroundColor: "#ffffff",
     };
   }
-  // }
   return (
     <BrowserRouter>
       <>
         <div className="App" style={divImage}>
           <div
             className="home-img-container"
-            onClick={(e) => setSearchIsFocused(false)}
+            onClick={() => setSearchIsFocused(false)}
           >
             <img src={Logo} />
           </div>
