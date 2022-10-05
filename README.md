@@ -1,4 +1,10 @@
-# Getting Started with Create React App
+<h1 align="center">
+  <span><h3>Search App</h3></span>
+    <p align="center">
+    <a href="https://reactjs.org/"><img src="https://img.shields.io/badge/Built%20With-React%20Js-blue?style=for-the-badge" alt="React js"/></a>
+    <a href="https://reactjs.org/"><img src="https://img.shields.io/badge/Launguages-Javascript-yellow?style=for-the-badge" alt="Javascript"/></a>
+  </p>
+</h1>
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -14,57 +20,51 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm test`
+## Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- User can search for desired product.
+- User can filter the products using category and price.
 
-### `npm run build`
+## Tech Stacks
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- React Js
+- Javascript
+- Libraries used
+    - Fakestore api
+    - Material UI
+    - Heroicons
+    
+## Structure
+- App.js
+  - SearchBar Component
+  - Home Page
+    - LatestBox
+      - ProductCard (used differently because of different size and styles than search page products)
+  - Search Page
+    - FilterBox
+    - Products
+      - ProductItem (used differently because of different size and styles than home page products)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Screenshots
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<p align="center">
+  <img src="/docs/images/img1.png" width="26%" alt=""/>
+  <img src="/docs/images/img2.png" width="26%" alt=""/>
+  <img src="/docs/images/img3.png" width="26%" alt=""/>
+  <img src="/docs/images/img4.png" width="26%" alt=""/>
+  <img src="/docs/images/img5.png" width="26%" alt=""/>
+  <img src="/docs/images/img6.png" width="26%" alt=""/>
+  <img src="/docs/images/img7.png" width="26%" alt=""/>
+  <img src="/docs/images/img8.png" width="26%" alt=""/>
+  <img src="/docs/images/img9.png" width="26%" alt=""/>
+  <img src="/docs/images/img10.png" width="26%" alt=""/>
+  <img src="/docs/images/img11.png" width="26%" alt=""/>
+</p>
 
-### `npm run eject`
+## Link
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+<a href="https://golden-brigadeiros-e6aaaf.netlify.app/"><img src="https://img.shields.io/badge/Click here-%20-blue?style=plastic&logo=react" alt="link"/></a>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Support
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- If you have any issues, feel free to reach out [hiteshsukhwani29@gmail.com](mailto:hiteshsukhwani29@gmail.com).
