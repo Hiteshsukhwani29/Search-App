@@ -1,12 +1,19 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./index.css";
 import { MagnifyingGlassIcon } from "@heroicons/react/24/solid";
+import { useNavigate, useParams } from "react-router-dom";
 
-function Index({ SearchIsFocused, setSearchIsFocused }) {
-  const [SearchText, setSearchText] = useState("");
+function Index({
+  SearchText,
+  setSearchText,
+  SearchIsFocused,
+  setSearchIsFocused,
+}) {
+  let navigate = useNavigate();
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    setSearchText("");
+    navigate(`/search/${SearchText}`);
   };
   return (
     <div className="searchbar-wrapper">

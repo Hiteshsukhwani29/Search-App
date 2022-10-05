@@ -1,0 +1,13 @@
+.searchpage {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 40px;
+}
+.searchpage-body {
+    display: flex;
+}
+.searchpage-heading {
+    font-size: 26px;
+    margin-bottom: 20px;
+}

@@ -10,6 +10,8 @@ import { useState } from "react";
 function App() {
   const [SearchIsFocused, setSearchIsFocused] = useState(false);
   const [IsHomePage, setIsHomePage] = useState(true);
+  const [SearchText, setSearchText] = useState("");
+  
   // const { pathname } = useLocation();
   // if(pathname==="search"){
     if(IsHomePage===true){
@@ -35,13 +37,15 @@ else{
         <img src={Logo} />
       </div>
       <Searchbar
+      SearchText={SearchText}
+      setSearchText={setSearchText}
         SearchIsFocused={SearchIsFocused}
         setSearchIsFocused={setSearchIsFocused}
       />
         <Routes>
         <Route path="/" element={<Home SearchIsFocused={SearchIsFocused}
         setSearchIsFocused={setSearchIsFocused} setIsHomePage={setIsHomePage} />} />
-        <Route path="/search" element={<SearchPage  setIsHomePage={setIsHomePage} />} />
+        <Route path="/search/:id" element={<SearchPage  setIsHomePage={setIsHomePage} />} />
         </Routes>
       </div>
       </>
