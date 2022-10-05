@@ -1,19 +1,35 @@
 import React, { useState } from "react";
 import "./index.css";
 import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/24/solid";
-import { FormControlLabel, FormGroup, Checkbox } from "@mui/material";
+import {
+  FormControlLabel,
+  FormGroup,
+  Checkbox,
+  FormControl,
+  Radio,
+  FormLabel,
+  RadioGroup,
+} from "@mui/material";
 
-function Index() {
+function Index({
+  MensClothing,
+  setMensClothing,
+  Jewelery,
+  setJewelery,
+  Electronics,
+  setElectronics,
+  WomenClothing,
+  setWomenClothing,
+  PriceRange,
+  setPriceRange,
+}) {
   const [checked, setChecked] = useState(true);
   const [OpenCategoryDropdown, setOpenCategoryDropdown] = useState(true);
   const [OpenPriceDropdown, setOpenPriceDropdown] = useState(false);
   const [OpenRatingDropdown, setOpenRatingDropdown] = useState(false);
 
-  const handleChange = (event) => {
-    setChecked(event.target.checked);
-  };
   return (
-    <div>
+    <div className="filter-wrapper">
       <div className="category">
         <div
           className="category-title"
@@ -32,38 +48,38 @@ function Index() {
               <FormControlLabel
                 control={
                   <Checkbox
-                    defaultChecked
                     style={{
                       margin: "-5px 0px",
                       transform: "scale(0.8)",
                     }}
+                    onClick={() => setMensClothing(!MensClothing)}
                   />
                 }
-                label="Label"
+                label="Men's Clothing"
               />
               <FormControlLabel
                 control={
                   <Checkbox
-                    defaultChecked
                     style={{
                       margin: "-5px 0px",
                       transform: "scale(0.8)",
                     }}
+                    onClick={() => setJewelery(!Jewelery)}
                   />
                 }
-                label="Label"
+                label="Jewelery"
               />
               <FormControlLabel
                 control={
                   <Checkbox
-                    defaultChecked
                     style={{
                       margin: "-5px 0px",
                       transform: "scale(0.8)",
                     }}
+                    onClick={() => setElectronics(!Electronics)}
                   />
                 }
-                label="Label"
+                label="Electronics"
               />
             </FormGroup>
           </div>
@@ -86,7 +102,64 @@ function Index() {
         </div>
         {OpenPriceDropdown ? (
           <div className="category-checklist">
-            <FormGroup>
+            <FormControl>
+              <RadioGroup
+                aria-labelledby="demo-radio-buttons-group-label"
+                value={PriceRange}
+                name="radio-buttons-group"
+                onChange={(e) => setPriceRange(e.target.value)}
+              >
+                <FormControlLabel
+                  value={20}
+                  control={
+                    <Radio
+                      style={{
+                        margin: "-5px 0px",
+                        transform: "scale(0.8)",
+                      }}
+                    />
+                  }
+                  label="Upto 20$"
+                />
+                <FormControlLabel
+                  value={50}
+                  control={
+                    <Radio
+                      style={{
+                        margin: "-5px 0px",
+                        transform: "scale(0.8)",
+                      }}
+                    />
+                  }
+                  label="Upto 50$"
+                />
+                <FormControlLabel
+                  value={100}
+                  control={
+                    <Radio
+                      style={{
+                        margin: "-5px 0px",
+                        transform: "scale(0.8)",
+                      }}
+                    />
+                  }
+                  label="Upto 100$"
+                />
+                <FormControlLabel
+                  value={1000}
+                  control={
+                    <Radio
+                      style={{
+                        margin: "-5px 0px",
+                        transform: "scale(0.8)",
+                      }}
+                    />
+                  }
+                  label="Upto 1000$"
+                />
+              </RadioGroup>
+            </FormControl>
+            {/* <FormGroup>
               <FormControlLabel
                 control={
                   <Checkbox
@@ -123,7 +196,7 @@ function Index() {
                 }
                 label="Label"
               />
-            </FormGroup>
+            </FormGroup> */}
           </div>
         ) : (
           <></>

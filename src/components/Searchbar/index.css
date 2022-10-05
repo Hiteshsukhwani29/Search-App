@@ -33,3 +33,10 @@
   margin: 0px 0px 0px 10px;
   color: #666;
 }
+@media only screen and (max-width: 600px) {
+  .searchbar > input {
+    height: 24px;
+    width: 200px;
+    border: none;
+  }
+}

@@ -48,3 +48,23 @@
   text-align: left;
   font-size: 14px;
 }
+@media only screen and (max-width: 600px) {
+  .home-latestbox {
+    display: flex;
+    background-color: white;
+    width: 200px;
+    height: max-content;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 40px;
+    font-weight: 700;
+  }
+  .home-latestbox-latesttrends {
+    display: none;
+  }
+  .home-latestbox-latesttrends-title {
+    display: none;
+  }
+}
